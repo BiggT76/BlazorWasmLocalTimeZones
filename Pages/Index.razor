@@ -1,0 +1,25 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+<br />
+<br />
+
+<button class="btn btn-dark" @onclick="DisplayDate">Render Current Date/Time</button>
+
+<br />
+<br />
+<p>Current Date/Time:  @CurrentDate</p>
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+
+@code{
+    private DateTime CurrentDate { get; set; }
+
+    private void DisplayDate()
+    {
+        CurrentDate = DateTime.Now;
+    }
+}
